@@ -1,31 +1,16 @@
 <script setup>
 import { randomImgApi } from "@/api/img";
-// import { ref } from "vue";
 import { useRequest } from "alova/client";
 
 const { data, loading } = useRequest(randomImgApi, {
   initialData: [],
 });
-// const url = ref("1");
-// const getImg = async () => {
-//   loading.value = true;
-//   try {
-//     const a = await randomImgApi();
-//     console.log(1, a);
-
-//     // if (status !== "success") return;
-//     // url.value = message;
-//   } finally {
-//     loading.value = false;
-//   }
-// };
-
-// getImg();
+const url = ref("狗狗图片");
 </script>
 
 <template>
-  <main>
-    {{ loading }}--{{ url }}
+  <main class="flex flex-col items-center pt-10">
+    <p class="m-3">{{ url }}：{{ loading ? "加载中..." : "加载完成" }}</p>
     <img class="size-40" :src="data.message" />
   </main>
 </template>

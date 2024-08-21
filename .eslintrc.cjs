@@ -7,5 +7,6 @@ module.exports = {
     "plugin:vue/essential",
     "eslint:recommended",
     "@vue/eslint-config-prettier",
+    "./.eslintrc-auto-import.json",
   ],
 };

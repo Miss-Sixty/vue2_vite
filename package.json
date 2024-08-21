@@ -25,8 +25,30 @@
     "eslint": "^8.5.0",
     "eslint-plugin-vue": "^9.0.0",
     "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
     "prettier": "^2.5.1",
     "terser": "^5.14.2",
     "vite": "^3.0.2"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{cjs,json}": [
+      "prettier --write"
+    ],
+    "*.{vue,html}": [
+      "eslint --fix",
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{scss,css}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
   }
 }

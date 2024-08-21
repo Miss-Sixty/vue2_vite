@@ -1,6 +1,7 @@
 {
   "name": "vue2_demo",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,8 +11,6 @@
     "commitlint": "commitlint --edit"
   },
   "dependencies": {
-    "@sentry/vite-plugin": "^2.22.2",
-    "@sentry/vue": "^8.26.0",
     "vue": "^2.7.7",
     "vue-router": "^3.5.4"
   },
@@ -22,11 +21,14 @@
     "@vitejs/plugin-legacy": "^2.0.0",
     "@vitejs/plugin-vue2": "^1.1.2",
     "@vue/eslint-config-prettier": "^7.0.0",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.5.0",
     "eslint-plugin-vue": "^9.0.0",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
+    "postcss": "^8.4.41",
     "prettier": "^2.5.1",
+    "tailwindcss": "^3.4.10",
     "terser": "^5.14.2",
     "vite": "^3.0.2"
   },
@@ -40,11 +42,9 @@
     ],
     "*.{vue,html}": [
       "eslint --fix",
-      "prettier --write",
-      "stylelint --fix"
+      "prettier --write"
     ],
     "*.{scss,css}": [
-      "stylelint --fix",
       "prettier --write"
     ],
     "*.md": [
